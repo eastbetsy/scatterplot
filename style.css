@@ -1,0 +1,105 @@
+       body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .chart-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            position: relative;
+        }
+
+        #title {
+            text-align: center;
+            color: #1a202c;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        #subtitle {
+            text-align: center;
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+
+        .dot {
+            stroke: #333;
+            stroke-width: 1;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out, r 0.2s ease-in-out;
+        }
+
+        .dot:hover {
+            opacity: 1;
+            r: 8;
+        }
+
+        .axis-label {
+            font-size: 1rem;
+            fill: #2d3748;
+        }
+        
+        .tick text {
+            font-size: 0.8rem;
+            fill: #4a5568;
+        }
+
+        .tick line {
+            stroke: #e2e8f0;
+        }
+        
+        .domain {
+            stroke: #cbd5e0;
+        }
+
+        #tooltip {
+            position: absolute;
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            pointer-events: none;
+            transition: visibility 0.2s, opacity 0.2s;
+            opacity: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            white-space: pre-line;
+        }
+        
+        #tooltip.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #legend {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+        }
+
+        .legend-color {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
